@@ -93,3 +93,31 @@ pre code {
   margin-bottom: 1.5rem;
   color: #666;
 }
+
+.home-intro {
+  margin-bottom: 2.5rem;
+}
+
+.home-posts h2 {
+  margin-bottom: 1rem;
+}
+
+.post-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.post-list-item {
+  padding: 1.25rem 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.post-list-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.post-list-date {
+  color: #666;
+}
