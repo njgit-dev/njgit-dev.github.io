@@ -34,8 +34,14 @@ body {
   text-decoration: none;
 }
 
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
 .site-nav a {
-  margin-right: 1rem;
+  display: inline-block;
 }
 
 .site-main {
