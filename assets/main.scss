@@ -121,3 +121,19 @@ pre code {
 .post-list-date {
   color: #666;
 }
+
+.project-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.project-list-item {
+  padding: 1.25rem 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+.project-list-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}

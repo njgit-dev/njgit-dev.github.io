@@ -4,12 +4,12 @@ title: Blog
 permalink: /blog/
 ---
 
-<ul>
+<ul class="post-list">
   {% for post in site.posts %}
-    <li>
+    <li class="post-list-item">
       <p>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
-        <small>{{ post.date | date: "%B %-d, %Y" }}</small>
+        <small class="post-list-date">{{ post.date | date: "%B %-d, %Y" }}</small>
       </p>
       {{ post.excerpt }}
     </li>
