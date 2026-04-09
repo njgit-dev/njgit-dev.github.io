@@ -4,13 +4,14 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.65;
   color: #222;
   background: #fff;
+  font-size: 1rem;
 }
 
 .container {
-  width: min(90%, 48rem);
+  width: min(90%, 56rem);
   margin: 0 auto;
 }
 
@@ -20,16 +21,25 @@ body {
 }
 
 .site-header {
-  padding: 1.5rem 0;
+  padding: 1.25rem 0;
   border-bottom: 1px solid #ddd;
 }
 
-.site-header h1 {
-  margin: 0 0 0.75rem 0;
-  font-size: 1.75rem;
+.site-header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem 1.25rem;
 }
 
-.site-header h1 a {
+.site-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.site-brand a {
   color: inherit;
   text-decoration: none;
 }
@@ -37,21 +47,34 @@ body {
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem 1rem;
+  gap: 0.6rem 1rem;
+  row-gap: 0.5rem;
 }
 
 .site-nav a {
   display: inline-block;
+  color: #444;
+}
+
+.site-nav a:hover {
+  color: #111;
+  text-decoration: none;
+}
+
+.site-nav a.is-active {
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .site-main {
-  padding: 2rem 0;
+  padding: 2.5rem 0;
 }
 
 .site-footer {
-  padding: 2rem 0;
+  padding: 2.25rem 0;
   border-top: 1px solid #ddd;
-  margin-top: 3rem;
+  margin-top: 4rem;
   font-size: 0.95rem;
   color: #555;
 }
@@ -59,15 +82,35 @@ body {
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: 1.15;
   margin-top: 0;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.85rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.65rem;
 }
 
 p,
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.1rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
 }
 
 a {
@@ -147,4 +190,172 @@ pre code {
 .project-list-item:first-child {
   border-top: none;
   padding-top: 0;
+}
+
+.landing-content {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.landing-shell {
+  width: min(90%, 72rem);
+}
+
+.landing-hero {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.landing-hero h1 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+  max-width: 24ch;
+}
+
+.landing-hero p {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 48ch;
+}
+
+.landing-section {
+  margin-bottom: 3rem;
+}
+
+.landing-split-section {
+  margin-bottom: 3rem;
+}
+
+.landing-split {
+  display: grid;
+  gap: 1.5rem 2rem;
+}
+
+.landing-split-intro h2 {
+  margin-bottom: 0;
+}
+
+.landing-split-body p:last-child {
+  margin-bottom: 0;
+}
+
+.landing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 1.75rem;
+}
+
+.landing-link {
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  border-radius: 0.45rem;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.15s ease;
+}
+
+.landing-link:hover {
+  background: #333;
+  text-decoration: none;
+}
+
+.landing-callout {
+  margin: 3rem 0;
+  padding: 2rem 1.75rem;
+  background: #f5f5f5;
+  border-radius: 0.75rem;
+}
+
+.landing-callout-inner {
+  max-width: 42rem;
+}
+
+.landing-callout h2 {
+  margin-bottom: 0.75rem;
+}
+
+.landing-callout p {
+  margin-bottom: 0;
+  color: #444;
+}
+
+.section-heading {
+  margin-bottom: 1.25rem;
+}
+
+.section-heading h2 {
+  margin-bottom: 0.5rem;
+}
+
+.section-heading p {
+  max-width: 44rem;
+  color: #555;
+}
+
+.section-heading p:last-child {
+  margin-bottom: 0;
+}
+
+.feature-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.feature-card {
+  padding: 1.25rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.75rem;
+  background: #fafafa;
+}
+
+.feature-card h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.feature-card p:last-child {
+  margin-bottom: 0;
+}
+
+article > *:last-child {
+  margin-bottom: 0;
+}
+
+
+@media (min-width: 48rem) {
+  .landing-split {
+    grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 40rem) {
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  .landing-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .site-header-inner {
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    width: 100%;
+  }
 }

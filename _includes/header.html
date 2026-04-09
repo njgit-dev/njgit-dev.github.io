@@ -1,13 +1,28 @@
 <header class="site-header">
   <div class="container">
-    <div class="content-measure">
-      <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
-      <nav class="site-nav">
-      <a href="{{ "/" | relative_url }}">Home</a>
-      <a href="{{ "/about/" | relative_url }}">About</a>
-      <a href="{{ "/projects/" | relative_url }}">Projects</a>
-      <a href="{{ "/blog/" | relative_url }}">Blog</a>
-    </nav>
+    <div class="site-header-inner">
+      <div class="site-brand">
+        <a href="{{ "/" | relative_url }}">{{ site.title }}</a>
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <a
+          href="{{ "/" | relative_url }}"
+          {% if page.url == "/" %}class="is-active"{% endif %}
+        >Home</a>
+        <a
+          href="{{ "/about/" | relative_url }}"
+          {% if page.url == "/about/" %}class="is-active"{% endif %}
+        >About</a>
+        <a
+          href="{{ "/projects/" | relative_url }}"
+          {% if page.url == "/projects/" or page.collection == "projects" %}class="is-active"{% endif %}
+        >Projects</a>
+        <a
+          href="{{ "/blog/" | relative_url }}"
+          {% if page.url == "/blog/" or page.layout == "post" %}class="is-active"{% endif %}
+        >Blog</a>
+      </nav>
     </div>
   </div>
 </header>
